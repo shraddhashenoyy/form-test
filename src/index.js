@@ -1,13 +1,29 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { useState } from "react";
-import Form1 from "./form1";
+import React from "react";
+import {useState} from "react";
+import Header from "./component/Header";
+import {BrowserRouter as Router,Route}from "react-router-dom";
+import Customize from "./component/Customize";
+import Checkout from "./component/Checkout";
 
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
 
-root.render(
-  <StrictMode>
-    <Form1 />
-  </StrictMode>
-);
+export default function App() {
+    const[ingredients,setIngredients]= useState("");
+
+    return(
+       <div>
+          <Header/>
+          <Router>
+           <Route exact path="/">
+                   <Customize
+                   ingredients={ingredients} 
+                   setIngredients={setIngredients}/>
+                 </Route>
+                <Route path="/checkout">
+                    <Checkout
+                    ingredients={ingredients} />
+
+                </Route>
+          </Router>
+       </div>
+   );
+}

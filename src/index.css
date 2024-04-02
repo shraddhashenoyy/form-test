@@ -1,0 +1,25 @@
+body {
+     margin:0;
+    
+}
+
+.ingredients{
+    position:absolute;
+
+}
+
+.container-radio .checkmark:after{
+     content:"";
+     position:absolute;
+     display:none;
+    }
+
+.container-radio .checkmark:after{
+      top:9px;
+      left:9px;
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:white;
+
+}
