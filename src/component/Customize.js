@@ -1,8 +1,6 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 
-
-
 export default function Customize({ingredients,setIngredients}){
             const onChange=(event,name)=>{
             let newIngredients=JSON.parse(JSON.stringify(ingredients));

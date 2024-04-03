@@ -1,15 +1,14 @@
 import React from "react";
 import {useState} from "react";
-import Header from "./component/Header";
+import Header from "../component/Header";
 import {BrowserRouter as Router,Route}from "react-router-dom";
-import Customize from "./component/Customize";
-import Checkout from "./component/Checkout";
-
+import Customize from "../component/Customize";
+import Checkout from "../component/Checkout";
 
 export default function App() {
     const[ingredients,setIngredients]= useState("");
 
-    return(
+return(
        <div>
           <Header/>
           <Router>
